@@ -37,9 +37,41 @@ class SWSetup extends Module {
 
     }
 
+    public function ajaxProcess() {
+        if(!($action = isset($_POST['action'])))
+            return false;
+
+        switch ($action) {
+            case 'save-shop':
+                Configuration::updateValue('PS_SHOP_NAME', $_POST['name']);
+                $return = array(
+                    'name' => $_POST['name']
+                );
+                echo json_encode($return);
+            die();
+            
+            case 'save-other':
+
+            die();
+        }
+    }
+
     public function getContent() {
+        $this->ajaxProcess();
+        $ps_shop_name = 
         ob_start();
-        include(__DIR__ . '/bo-html.php');
+        ?>
+
+        <div class="panel">
+            <script>
+                var ps_module = '<?php echo $this->l('SW Setup'); ?>';
+                var ps_shop_name = '<?php echo Configuration::get('PS_SHOP_NAME'); ?>';
+                var RURI = location.href;
+            </script>
+            <div  id="app"></div>
+            <script type="text/javascript" src="<?php echo __PS_BASE_URI__ . '/modules/swsetup/swsetup/js/admin.js';?>"></script>
+        </div>
+        <?php
         return ob_get_clean();
     }
 

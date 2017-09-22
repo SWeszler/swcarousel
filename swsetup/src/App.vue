@@ -2,15 +2,15 @@
   <div id="app">
     <h1 class="module-name">{{ msg }}</h1>
       <el-tabs type="border-card">
-      <el-tab-pane label="Shop" name="first">
+      <el-tab-pane label="Shop" value="active">
         <span slot="label"><i class="el-icon-information"></i>
         Shop
         </span>
-        1. Shop name
+        <shop-tab></shop-tab>
       </el-tab-pane>
-      <el-tab-pane label="Config" name="second">Config</el-tab-pane>
-      <el-tab-pane label="Role" name="third">Role</el-tab-pane>
-      <el-tab-pane label="Task" name="fourth">Task</el-tab-pane>
+      <el-tab-pane label="Config">Config</el-tab-pane>
+      <el-tab-pane label="Role">Role</el-tab-pane>
+      <el-tab-pane label="Task">Task</el-tab-pane>
       </el-tabs>
   </div>
 </template>
@@ -20,12 +20,14 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: ps_module
+      msg: ps_module,
     }
   }
 }
 </script>
 
 <style lang="scss">
-
+.el-button {
+  line-height: 1 !important;
+}
 </style>
