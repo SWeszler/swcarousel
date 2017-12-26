@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACb,OAAO,EAAE,MAAM;EACf,UAAU,EAAE,IAAI;EAChB,qBAAO;IACN,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,MAAM;IACd,SAAS,EAAE,IAAI",
+"sources": ["../scss/swcarousel.scss"],
+"names": [],
+"file": "swcarousel.css"
+}

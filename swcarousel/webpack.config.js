@@ -40,7 +40,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]',
-          publicPath: 'http://localhost/vinet.pl/modules/swsetup/swsetup/js/'
+          publicPath: 'http://localhost/vinet.pl/modules/swcarousel/swcarousel/js/'
         }
       },
       {

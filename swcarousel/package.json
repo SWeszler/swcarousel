@@ -1,6 +1,6 @@
 {
-  "name": "swsetup",
-  "description": "Prestashop Module - development process setup",
+  "name": "swcarousel",
+  "description": "Prestashop Module - carousel image module with Owl carousel script",
   "version": "1.0.0",
   "author": "Sebastian <s.weszler@gmail.com>",
   "private": true,
